@@ -45,13 +45,7 @@ Webcam.set({
     png_quality:90
 });
 
-var SpeechRecognition = window.webkitSpeechRecognition;
-var recognition = new SpeechRecognition();
-function start()
-{
-   document.getElementById("textbox").innerHTML = ""; 
-   recognition.start();
-} 
+
 
 function take_snapshot(){
     Webcam.snap(function(data_uri){
@@ -64,7 +58,7 @@ function take_snapshot(){
 
 function save(){
     link=document.getElementById("link");
-    image=document.getElementById("selfie_image").scroll;
+    image=document.getElementById("selfie_image").src;
     link.href=image;
     link.click();
 
